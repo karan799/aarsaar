@@ -1,16 +1,16 @@
 {
     "version": 2,
     "builds": [
-      { "src": "aarsaar/server.js", "use": "@vercel/node" },
-      { "src": "aarsaar/frontend", "use": "@vercel/static-build" }
+        {
+            "src": "*.js",
+            "use": "@vercel/node"
+        }
     ],
     "routes": [
-      { "src": "/api/(.*)", "dest": "/backend/server.js" },
-      { "src": "/(.*)", "dest": "/aarsaar/frontend/index.html" }
-    ],
-    "rewrites": [
-      { "source": "/api/(.*)", "destination": "/aarsaar/server.js/$1" },
-      { "source": "/(.*)", "destination": "/aarsaar/frontend/index.html" }
+        {
+            "src": "/(.*)",
+            "dest": "/"
+        }
     ]
-  }
+}
   
