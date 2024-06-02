@@ -10,8 +10,8 @@
     "routes": [
       
       {
-        "src": "/.",
-        "dest": "/frontend/dist"
+        "src": "/(.*)",
+        "dest": "/app.js"
       }
     ]
   }
